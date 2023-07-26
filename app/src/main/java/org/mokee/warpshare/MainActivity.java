@@ -174,13 +174,11 @@ public class MainActivity extends AppCompatActivity implements DiscoverListener 
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.settings:
+        if (item.getItemId()==R.id.settings) {
                 startActivity(new Intent(this, SettingsActivity.class));
                 return true;
-            default:
-                return super.onOptionsItemSelected(item);
         }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
